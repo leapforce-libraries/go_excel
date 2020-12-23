@@ -1,7 +1,6 @@
 package excel
 
 import (
-	"fmt"
 	"reflect"
 	"strings"
 )
@@ -121,7 +120,6 @@ func getTagParam(v string) (key, value string) {
 	start := strings.Index(v, "(")
 	end := strings.LastIndex(v, ")")
 	if start > 0 && end == len(v)-1 {
-		fmt.Println(v[start+1 : end])
 		return v[:start], v[start+1 : end]
 	}
 	// log.Printf("Use column as default?[%s]\n", v)
